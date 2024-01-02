@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@now/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/extractData",
+        "dest": "/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ],
+    "env": {
+      "PORT": "3000", 
+      "AUTH_HEADER": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6eyJ0eXBlIjoiT1BTQUdFTlQiLCJmYWNpbGl0eUlkIjo4OCwiZmFjaWxpdHlUeXBlIjoiU1RPUERFU0sifSwidHlwZSI6InNpZ24taW4iLCJ1c2VySWQiOjU4LCJpYXQiOjE3MDQxMDYxMjIsImV4cCI6MTcwNjY5ODEyMn0.sT_yUpFYQ72yGBLNIw1AWOtBQBlhu3IYsp6k-k86-1c"
+    }
+  }
+  
